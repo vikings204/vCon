@@ -1,8 +1,14 @@
 import vgamepad as vg
 import keyboard as kb
-import time
+# import time
 
-print("vCon by Team 204: a virtual controller emulator\nusage: [right shift] to toggle, [left shift] to configure, close this window to stop the emulator")
+print(""" __   __    ______   ______   __   __    
+/\\ \\ / /   /\\  ___\\ /\\  __ \\ /\\ "-.\\ \\   
+\\ \\ \\'/    \\ \\ \\____\\ \\ \\/\\ \\\\ \\ \\-.  \\  
+ \\ \\__|     \\ \\_____\\\\ \\_____\\\\ \\_\\\\"\\_\\ 
+  \\/_/       \\/_____/ \\/_____/ \\/_/ \\/_/ 
+""")
+print("vCon v1.1.0 // a virtual controller emulator\nBy Team 204 Vikings\nusage: [right shift] to toggle, [left shift] to configure, close this window to stop the emulator")
 print("left joy - [WASD], right joy - [IJKL]\ndpad - arrow keys, XYAB - [FVHB]")
 print("bumpers - [E][U], triggers - [Q][O]")
 print("\nstarting..")
@@ -89,7 +95,7 @@ while True:
         ip_trig0 = kb.is_pressed(trigKeys[0])
         ip_trig1 = kb.is_pressed(trigKeys[1])
         ip_joyc0 = kb.is_pressed(joycKeys[0])
-        ip_74oyc1 = kb.is_pressed(joycKeys[1])
+        ip_joyc1 = kb.is_pressed(joycKeys[1])
 
         # left y
         # noinspection DuplicatedCode
@@ -190,4 +196,5 @@ while True:
         g.right_trigger_float(trig_r)
         g.update()
 
-    time.sleep(0.008)  # bad attempt at: effectively 125hz "polling" rate
+    # enough delay in the code, sleep is unnecessary
+    # time.sleep(0.008)  # bad attempt at: effectively 125hz "polling" rate
